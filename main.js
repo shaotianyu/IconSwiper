@@ -5,7 +5,7 @@
 
 		if(!ele) return null;
 
-		this.container = ele;
+		this.container = document.querySelectorAll(ele)[0];
 
 		this.options = options || {};
 		this.speed = this.options.speed || '0.5s';
@@ -14,7 +14,7 @@
 
 		this.params = this.initParam();
 
-		this.page = 1; //ÏÂ±êÖµ
+		this.page = 1; //下标值
 
 		this.initStyle();
 
@@ -36,12 +36,12 @@
 
 		initParam:function(){
 			return{
-				startX : 0,	//	start×ø±ê
-				moveX : 0,	// move×ø±ê
-				endX : 0,	//	end×ø±ê
-				differX : 0,// touch×ø±ê²îÖµ
-				tempX : 0,//ÁÙÊ±¼ÇÂ¼×ø±ê
-				transl : null //transform±äÁ¿
+				startX : 0,	//	start坐标
+				moveX : 0,	// move坐标
+				endX : 0,	//	end坐标
+				differX : 0,// touch坐标差值
+				tempX : 0,//临时记录坐标
+				transl : null //transform变量
 			}
 		},
 
